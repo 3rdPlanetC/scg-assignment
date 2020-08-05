@@ -6,6 +6,8 @@ app.get('/', (req, res) => {
     res.send('hello world')
 })
 
+app.post('/webhook', (req, res) => res.sendStatus(200))
+
 app.listen(PORT, () => {
     console.log(`Server is running on ${PORT}`)
 })
