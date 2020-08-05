@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const controller = require('../controllers/DOSCG')
+const { lineNotification } = require('../controllers/DOSCG')
 
-router.post('/webhook', controller.lineNotification)
+router.post('/webhook', lineNotification)
 
 module.exports = router

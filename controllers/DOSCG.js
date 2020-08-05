@@ -2,7 +2,9 @@ const request = require('request')
 const keys = require('../config')
 
 const lineNotification = (req, res) => {
-    let replyToken = req.body.events[0].replyToken
+    let event = req.body.events[0]
+    let replyToken = event.replyToken
+    console.log(event)
     reply(replyToken)
     res.sendStatus(200)
 }
