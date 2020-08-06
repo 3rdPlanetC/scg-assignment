@@ -16,11 +16,20 @@
             const directionsService = new google.maps.DirectionsService()
             const directionsRenderer = new google.maps.DirectionsRenderer()
             const map = new google.maps.Map(document.getElementById("map"), {
-                zoom: 7,
+                zoom: 15,
                 center: { lat: 13.7745414, lng: 100.5024798 }
             })
 
             directionsRenderer.setMap(map)
+            directionsService.route({
+                origin: "SCG สำนักงานใหญ่ บางซื่อ 1 Siam Cement Alley, Bang Sue, Bangkok 10800",
+                destination: "centralwOrld, 999/9 Rama I Rd, Pathum Wan, Pathum Wan District, Bangkok 10330",
+                travelMode: 'DRIVING'
+            }, function(result, status) {
+                if (status == 'OK') {
+                directionsRenderer.setDirections(result);
+                }
+            })
             // calculateAndDisplayRoute(directionsService, directionsRenderer)
         }
 
