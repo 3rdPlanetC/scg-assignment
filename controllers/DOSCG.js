@@ -18,6 +18,8 @@ const reply = (replyToken, userMessage) => {
     } else if (userMessage === 'B and C Finding value') {
         const {b,c} = BCFinding(21)
         responseMessage = `B = ${b}, C = ${c}`
+    } else if (userMessage === 'SCG Bangsue to Central World') {
+        responseMessage = "https://whispering-savannah-62098.herokuapp.com"
     }
     // switch(userMessage) {
     //     case 'X Y Z Finding value':
