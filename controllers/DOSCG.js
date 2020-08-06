@@ -19,7 +19,7 @@ const reply = (replyToken, userMessage) => {
         const {b,c} = BCFinding(21)
         responseMessage = `B = ${b}, C = ${c}`
     } else if (userMessage === 'SCG Bangsue to Central World') {
-        responseMessage = "https://liff.line.me/1654650332-8pv1blxk"
+        responseMessage = "https://whispering-savannah-62098.herokuapp.com"
     }
     // switch(userMessage) {
     //     case 'X Y Z Finding value':
