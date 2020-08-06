@@ -1,7 +1,7 @@
 const express = require('express')
 const router = express.Router()
-const { GoogleMapDirection } = require('../controllers/GoogleMapDirectionController')
+const { googleMap } = require('../controllers/GoogleMapDirection')
 
-router.get('/', GoogleMapDirection)
+router.get('/', googleMap)
 
 module.exports = router
