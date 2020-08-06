@@ -1,4 +1,4 @@
-1. Add Line: @287nzwtm เพื่อรับ Output ผ่านทาง Line
+1. Add Line: ```@287nzwtm``` เพื่อรับ Output ผ่านทาง Line
 2. npm install package
 3. พิม Input ตามโจทย์ที่กำหนด
   3.1 พิม "X Y Z Finding value" เพื่อหาค่า X, Y และ Z ตามที่โจทย์กำหนด
