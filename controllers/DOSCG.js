@@ -12,6 +12,8 @@ const lineNotification = (req, res) => {
 
 const reply = (replyToken, userMessage) => {
     let responseMessage = null
+    console.log(userMessage)
+    console.log(userMessage === 'X Y Z Finding value')
     switch(userMessage) {
         case 'X Y Z Finding value':
             const {x, y, z} = XYZFinding()
