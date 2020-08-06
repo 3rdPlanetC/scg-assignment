@@ -16,7 +16,7 @@ const reply = (replyToken, userMessage) => {
     if (userMessage === 'X Y Z Finding value') {
         const {x, y, z} = XYZFinding()
         responseMessage = `X = ${x}, Y = ${y}, Z = ${z}`
-    } else if (true) {
+    } else if (userMessage === 'B and C Finding value') {
         const {b,c} = BCFinding(21)
         responseMessage = `B = ${b}, C = ${c}`
     }
@@ -54,15 +54,16 @@ const reply = (replyToken, userMessage) => {
 // function
 const XYZFinding = () => {
     const set = [null, null, 5, 9, 15, 23, null]
-    const position = []
+    const pos = []
     const result = set.map((num, index) => {
-        position.push(index)
+        if (num === null) {
+            pos.push(index)
+        }
         return (index+1)**2+(index+1)*(-3)+5
     })
-    const x = result[0]
-    const y =  result[1]
-    const z = result[6]
-    console.log("position: ", position)
+    const x = result[pos[0]]
+    const y =  result[pos[1]]
+    const z = result[pos[2]]
     return {
         x,y,z
     }
