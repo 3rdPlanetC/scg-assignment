@@ -1,5 +1,6 @@
 const express = require('express')
 const bodyParser = require('body-parser')
+var path = require('path')
 const app = express()
 const PORT = process.env.PORT || 3000
 
@@ -8,10 +9,12 @@ app.use(bodyParser.json())
 
 // routes
 const webhook = require('./routes/webhook')
-const users = require('./routes/users')
 
 app.use('/webhook', webhook)
-app.use('/direction', users)
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname + '/index.html'))
+})
+// app.use('/direction', users)
 
 // app.post('/webhook', (req, res) => {
     // let replyToken = req.body.events[0].replyToken
