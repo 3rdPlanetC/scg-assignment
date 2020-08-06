@@ -21,16 +21,7 @@ const reply = (replyToken, userMessage) => {
     } else if (userMessage === 'SCG Bangsue to Central World') {
         responseMessage = "https://whispering-savannah-62098.herokuapp.com"
     }
-    // switch(userMessage) {
-    //     case 'X Y Z Finding value':
-            
-    //     case 'B C Finding value':
-    //         // B C Finding Function
-    //     case 'SCG Bangsue to Central World':
-    //         // Google API Function
-    //     default:
-    //         responseMessage = userMessage
-    // }
+
     const body = JSON.stringify({
         replyToken: replyToken,
         messages: [
