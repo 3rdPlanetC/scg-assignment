@@ -17,32 +17,19 @@
             const directionsRenderer = new google.maps.DirectionsRenderer()
             const map = new google.maps.Map(document.getElementById("map"), {
                 zoom: 7,
-                center: { lat: 41.85, lng: -87.65 }
+                center: { lat: 13.7745414, lng: 100.5024798 }
             })
+
             directionsRenderer.setMap(map)
-            const onChangeHandler = function() {
-                calculateAndDisplayRoute(directionsService, directionsRenderer)
-            }
-            document.getElementById("start").addEventListener(
-                "change",
-                onChangeHandler
-            )
-            document.getElementById("end").addEventListener(
-                "change",
-                onChangeHandler
-            )
+            calculateAndDisplayRoute(directionsService, directionsRenderer)
         }
 
         function calculateAndDisplayRoute(DirectionsService, DirectionsRenderer) {
             DirectionsService.route(
                 {
-                    origin: {
-                        query: document.getElementById("start").value
-                    },
-                    destination: {
-                        query: document.getElementById("end").value
-                    },
-                    travelMode: google.maps.TravelMode.DRIVING
+                    origin: "centralwOrld, 999/9 Rama I Rd, Pathum Wan, Pathum Wan District, Bangkok 10330",
+                    destination: "SCG สำนักงานใหญ่ บางซื่อ 1 Siam Cement Alley, Bang Sue, Bangkok 10800",
+                    travelMode: 'DRIVING',
                 },
                     (response, status) => {
                     if (status === "OK") {
@@ -59,6 +46,10 @@
         #map {
             height: 400px;
             width: 100%;
+        }
+        body {
+            margin: 0;
+            box-sizing: border-box;
         }
     </style>
 </head>
