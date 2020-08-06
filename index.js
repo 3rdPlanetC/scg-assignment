@@ -8,8 +8,10 @@ app.use(bodyParser.json())
 
 // routes
 const webhook = require('./routes/webhook')
+const users = require('./routes/users')
 
-app.use('/', webhook)
+app.use('/webhook', webhook)
+app.use('/direction', users)
 
 // app.post('/webhook', (req, res) => {
     // let replyToken = req.body.events[0].replyToken

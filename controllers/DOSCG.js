@@ -12,7 +12,6 @@ const lineNotification = (req, res) => {
 
 const reply = (replyToken, userMessage) => {
     let responseMessage = null
-    console.log(userMessage)
     if (userMessage === 'X Y Z Finding value') {
         const {x, y, z} = XYZFinding()
         responseMessage = `X = ${x}, Y = ${y}, Z = ${z}`
