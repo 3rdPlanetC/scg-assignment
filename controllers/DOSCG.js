@@ -55,31 +55,6 @@ const XYZFinding = () => {
     return {
         x,y,z
     }
-    // const equationSet = []
-    // const base = 1
-    // function calculate(set, base, equationSet) {
-    //     const isNumber = set.map((num, index) => {
-    //         if (num !== null) {
-    //             return {
-    //                 number: num,
-    //                 index: index+1,
-    //                 equation: `${(index**2)+(index*(-3)+5)}`
-    //             }
-    //         }
-    //     })
-    // }
-
-    function setEquation(number) {
-        return 
-    }
-    // const data = {
-    //     arr: set.reverse().map((_, index) => {
-    //         if (set[index] !== null && set[index+1] !== null) {
-    //             let result = set[index] - set[index+1]
-    //             return result
-    //         }
-    //     })
-    // }
 }
 
 module.exports = {
