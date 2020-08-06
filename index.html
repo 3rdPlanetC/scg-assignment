@@ -11,16 +11,6 @@
     <meta property="og:image" content="An image URL">
     <title>SCG Bangsue to Central World</title>
     <script src="https://static.line-scdn.net/liff/edge/2.1/liff.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhpv5h-P1zirWABjT5q65yKQh-xu_qzmU&callback=initMap"></script>
-    <style>
-        #map {
-            height: 400px;
-            width: 100%;
-        }
-    </style>
-</head>
-<body>
-    <div id="map"></div>
     <script>
         function initMap() {
             const directionsService = new google.maps.DirectionsService()
@@ -64,5 +54,15 @@
             )
         }
     </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDhpv5h-P1zirWABjT5q65yKQh-xu_qzmU&callback=initMap"></script>
+    <style>
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="map"></div>
 </body>
 </html>
