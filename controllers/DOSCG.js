@@ -13,18 +13,20 @@ const lineNotification = (req, res) => {
 const reply = (replyToken, userMessage) => {
     let responseMessage = null
     console.log(userMessage)
-    console.log(userMessage === 'X Y Z Finding value')
-    switch(userMessage) {
-        case 'X Y Z Finding value':
-            const {x, y, z} = XYZFinding()
-            responseMessage = `X = ${x}, Y = ${y}, Z = ${z}`
-        case 'B C Finding value':
-            // B C Finding Function
-        case 'SCG Bangsue to Central World':
-            // Google API Function
-        default:
-            responseMessage = userMessage
+    if (userMessage === 'X Y Z Finding value') {
+        const {x, y, z} = XYZFinding()
+        responseMessage = `X = ${x}, Y = ${y}, Z = ${z}`
     }
+    // switch(userMessage) {
+    //     case 'X Y Z Finding value':
+            
+    //     case 'B C Finding value':
+    //         // B C Finding Function
+    //     case 'SCG Bangsue to Central World':
+    //         // Google API Function
+    //     default:
+    //         responseMessage = userMessage
+    // }
     const body = JSON.stringify({
         replyToken: replyToken,
         messages: [
