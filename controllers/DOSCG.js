@@ -1,25 +1,13 @@
 const request = require('request')
-const line = require('@line/bot-sdk')
 const keys = require('../config')
-
-const client = new line.Client({
-    channelAccessToken: keys.channelToken
-})
 
 // controller
 const lineNotification = (req, res) => {
-    // const event = req.body.events[0]
-    // const userMessage = event.message.text
-    // reply(replyToken, userMessage)
-    // res.sendStatus(200)
-
-    client.replyMessage(event.replyToken, "testing")
-        .then(() => {
-            console.log("reply already")
-        })
-        .catch(err => {
-            console.log(err)
-        })
+    const event = req.body.events[0]
+    const replyToken = event.replyToken
+    const userMessage = event.message.text
+    reply(replyToken, userMessage)
+    res.sendStatus(200)
 }
 
 const reply = (replyToken, userMessage) => {
